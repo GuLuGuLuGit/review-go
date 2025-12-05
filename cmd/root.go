@@ -6,16 +6,18 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 
-	"github.com/yourname/review-go/internal/ai"
-	"github.com/yourname/review-go/internal/config"
-	"github.com/yourname/review-go/internal/ui"
+	"github.com/GuLuGuLuGit/review-go/internal/ai"
+	"github.com/GuLuGuLuGit/review-go/internal/config"
+	"github.com/GuLuGuLuGit/review-go/internal/ui"
 )
 
 var rootCmd = &cobra.Command{
 	Use:   "review-go",
 	Short: "review-go 是一个基于 LLM 的 Git 暂存区代码审查工具",
 	Long: `review-go 是一个命令行工具，用于读取本地 Git 仓库暂存区的代码，
-将分阶段变更发送给 LLM 进行代码审查，并在终端 TUI 中展示审查结果。`,
+将分阶段变更发送给 LLM 进行代码审查，并在终端 TUI 中展示审查结果。
+
+使用 'review-go config' 命令管理配置文件。`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 读取配置并创建对应的 LLM Provider（支持 openai/deepseek/qwen 等）
 		cfg, err := config.Load()

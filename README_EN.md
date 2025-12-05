@@ -46,6 +46,28 @@ A template file `config.example.yaml` is provided in the repository. You can cre
 
 ### Using Configuration Template
 
+There are two ways to configure the project:
+
+#### Method A: Using Command Line Tool (Recommended)
+
+Use the `review-go config` command for quick configuration:
+
+```bash
+# Set DeepSeek API Key
+review-go config set-key sk-your-api-key-here --provider deepseek
+
+# Set OpenAI API Key
+review-go config set-key sk-your-api-key-here --provider openai
+
+# Set Qwen API Key
+review-go config set-key sk-your-api-key-here --provider qwen
+
+# Switch default provider
+review-go config set-provider deepseek
+```
+
+#### Method B: Manual Configuration File Editing
+
 1. **Copy Template File**
 
    ```bash
@@ -106,6 +128,34 @@ In this mode:
 - `base_url` and `model` will be auto-filled based on known vendors or default models
 
 ## Usage
+
+### Configuration Commands
+
+review-go provides convenient configuration commands:
+
+```bash
+# View all configuration commands
+review-go config --help
+
+# Set API Key for a specific provider
+review-go config set-key <api-key> --provider <provider-name>
+
+# Set default provider
+review-go config set-provider <provider-name>
+```
+
+**Examples**:
+
+```bash
+# Set DeepSeek API Key
+review-go config set-key sk-xxxxxxxx --provider deepseek
+
+# Set OpenAI API Key
+review-go config set-key sk-xxxxxxxx --provider openai
+
+# Switch default provider to deepseek
+review-go config set-provider deepseek
+```
 
 ### Basic Workflow
 
