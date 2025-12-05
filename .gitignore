@@ -1,0 +1,51 @@
+# 编译后的二进制文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+review-go
+
+# 测试二进制文件
+*.test
+
+# 输出目录
+/dist
+/bin
+
+# Go 工作区文件
+go.work
+go.work.sum
+
+# 依赖目录
+/vendor
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 配置文件（如果用户误将配置文件放在项目目录中）
+*.yaml
+!go.mod
+!go.sum
+!config.example.yaml  # 示例配置文件应该被提交到仓库
+config.yaml
+config.yml
+.env
+.env.local
+.env.*.local
+
+# 日志文件
+*.log
+
+# 临时文件
+tmp/
+temp/
+*.tmp
