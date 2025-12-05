@@ -10,8 +10,8 @@ import (
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/yourname/review-go/internal/ai"
-	"github.com/yourname/review-go/internal/gitops"
+	"github.com/GuLuGuLuGit/review-go/internal/ai"
+	"github.com/GuLuGuLuGit/review-go/internal/gitops"
 )
 
 // reviewLoadedMsg 是后台审核任务完成后发送给 UI 的消息。
@@ -46,32 +46,32 @@ type Model struct {
 // 一些简单的样式定义，使用 lipgloss。
 var (
 	spinnerStyle = lipgloss.NewStyle().
-			Foreground(lipgloss.Color("205")).
-			Padding(1, 2)
+		Foreground(lipgloss.Color("205")).
+		Padding(1, 2)
 
 	infoStyle = lipgloss.NewStyle().
-			Foreground(lipgloss.Color("244")).
-			Padding(0, 2)
+		Foreground(lipgloss.Color("244")).
+		Padding(0, 2)
 
 	errorStyle = lipgloss.NewStyle().
-			Foreground(lipgloss.Color("1")).
-			Padding(1, 2)
+		Foreground(lipgloss.Color("1")).
+		Padding(1, 2)
 
 	fileListStyle = lipgloss.NewStyle().
-			Border(lipgloss.RoundedBorder()).
-			BorderForeground(lipgloss.Color("240")).
-			Padding(0, 1)
+		Border(lipgloss.RoundedBorder()).
+		BorderForeground(lipgloss.Color("240")).
+		Padding(0, 1)
 
 	selectedFileStyle = lipgloss.NewStyle().
-				Foreground(lipgloss.Color("229")).
-				Background(lipgloss.Color("57")).
-				Bold(true)
+		Foreground(lipgloss.Color("229")).
+		Background(lipgloss.Color("57")).
+		Bold(true)
 
 	normalFileStyle = lipgloss.NewStyle().
-			Foreground(lipgloss.Color("252"))
+		Foreground(lipgloss.Color("252"))
 
 	reviewStyle = lipgloss.NewStyle().
-			Padding(0, 1)
+		Padding(0, 1)
 )
 
 // NewModel 创建一个带有初始 loading 状态和 Spinner 的 Model。

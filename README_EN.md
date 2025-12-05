@@ -21,7 +21,7 @@ A Git staged area code review tool based on LLM, supporting OpenAI, DeepSeek, Qw
 ### Get Source Code
 
 ```bash
-git clone https://github.com/yourname/review-go.git
+git clone https://github.com/GuLuGuLuGit/review-go.git
 cd review-go
 ```
 
@@ -194,8 +194,8 @@ The review prompt focuses on:
 ## Development & Contribution
 
 - **Module Path**:
-  - In your own repository, replace `module github.com/yourname/review-go` in `go.mod` with your actual repository address.
-  - Also update import paths in code (`github.com/yourname/review-go/...`).
+  - In your own repository, replace `module github.com/GuLuGuLuGit/review-go` in `go.mod` with your actual repository address.
+  - Also update import paths in code (`github.com/GuLuGuLuGit/review-go/...`).
 - **PRs Welcome**:
   - Add more LLM provider adapters
   - Optimize TUI experience

@@ -21,7 +21,7 @@
 ### 获取源码
 
 ```bash
-git clone https://github.com/yourname/review-go.git
+git clone https://github.com/GuLuGuLuGit/review-go.git
 cd review-go
 ```
 
@@ -194,8 +194,8 @@ review-go config set-provider deepseek
 ## 开发与贡献
 
 - **模块路径**：
-  - 请在自己的仓库中，将 `go.mod` 中的 `module github.com/yourname/review-go` 替换为你的实际仓库地址。
-  - 同时更新代码中的导入路径（`github.com/yourname/review-go/...`）。
+  - 请在自己的仓库中，将 `go.mod` 中的 `module github.com/GuLuGuLuGit/review-go` 替换为你的实际仓库地址。
+  - 同时更新代码中的导入路径（`github.com/GuLuGuLuGit/review-go/...`）。
 - **欢迎 PR**：
   - 新增更多 LLM 提供商适配
   - 优化 TUI 体验

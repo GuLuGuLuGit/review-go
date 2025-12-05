@@ -8,7 +8,7 @@ import (
 
 	openai "github.com/sashabaranov/go-openai"
 
-	"github.com/yourname/review-go/internal/config"
+	"github.com/GuLuGuLuGit/review-go/internal/config"
 )
 
 // LLMProvider 抽象出一个最小的 LLM 能力接口，便于在不同提供商之间切换。
@@ -162,5 +162,3 @@ func NewProvider(cfg config.Config) (LLMProvider, error) {
 
 	return NewOpenAICompatibleProvider(baseURL, apiKey, model)
 }
-
-

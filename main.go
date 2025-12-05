@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/yourname/review-go/cmd"
-	"github.com/yourname/review-go/internal/config"
+	"github.com/GuLuGuLuGit/review-go/cmd"
+	"github.com/GuLuGuLuGit/review-go/internal/config"
 )
 
 func main() {
@@ -19,5 +19,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-
-
