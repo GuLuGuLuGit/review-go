@@ -46,6 +46,28 @@ review-go 的配置文件默认读取自当前用户主目录下的 `~/.review-g
 
 ### 使用配置模板
 
+有两种方式配置项目：
+
+#### 方式 A: 使用命令行工具（推荐）
+
+使用 `review-go config` 命令快速配置：
+
+```bash
+# 设置 DeepSeek 的 API Key
+review-go config set-key sk-your-api-key-here --provider deepseek
+
+# 设置 OpenAI 的 API Key
+review-go config set-key sk-your-api-key-here --provider openai
+
+# 设置通义千问的 API Key
+review-go config set-key sk-your-api-key-here --provider qwen
+
+# 切换默认提供商
+review-go config set-provider deepseek
+```
+
+#### 方式 B: 手动编辑配置文件
+
 1. **复制模板文件**
 
    ```bash
@@ -106,6 +128,34 @@ api_key: "sk-your-api-key-here"
 - `base_url` 和 `model` 会根据已知厂商或默认模型自动补全
 
 ## 使用方法
+
+### 配置命令
+
+review-go 提供了便捷的配置命令：
+
+```bash
+# 查看所有配置命令
+review-go config --help
+
+# 设置指定提供商的 API Key
+review-go config set-key <api-key> --provider <provider-name>
+
+# 设置默认提供商
+review-go config set-provider <provider-name>
+```
+
+**示例**：
+
+```bash
+# 设置 DeepSeek API Key
+review-go config set-key sk-xxxxxxxx --provider deepseek
+
+# 设置 OpenAI API Key
+review-go config set-key sk-xxxxxxxx --provider openai
+
+# 切换默认提供商为 deepseek
+review-go config set-provider deepseek
+```
 
 ### 基本流程
 
